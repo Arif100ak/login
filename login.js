@@ -1,11 +1,17 @@
-const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
-const container = document.querySelector(".container");
+const open = document.getElementById('open')
+const close = document.getElementById('close')
 
-sign_up_btn.addEventListener("click", () => {
-  container.classList.add("sign-up-mode");
-});
+const navMenu = document.getElementById('side-nav')
 
-sign_in_btn.addEventListener("click", () => {
-  container.classList.remove("sign-up-mode");
-});
+
+if (open) {
+    open.addEventListener('click', () => {
+        navMenu.classList.add("show")
+    })
+
+}
+if (close) {
+    close.addEventListener('click', () => {
+        navMenu.classList.remove("show")
+    })
+}
